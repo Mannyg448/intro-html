@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-yellow-100">
+    <div class="min-h-screen container mx-auto flex flex-col items-center justify-center">
+
+        <div class="title">
+            <h1 class="text-6xl text-blue-500 font-bold italic my-4 ">My Errands for the Day!</h1>
+        </div>
+        <div class="form w-full my-8">
+            <form id="addForm" class="flex">
+                <input id="newTodo" type="text" class="flex-grow px-4  rounded-l-lg" placeholder="Please enter your action for the today!" />
+                <button class="bg-green-500 text-white py-2 px-4 rounded-r-lg hover:bg-green-700">Add</button>
+            </form>
+        </div>
+        <div id="todos" class="w-2/3 space-y-8 my-4">
+            <div>
+                <h3 class="text-3xl text-yellow-600">Actions not Done</h3>
+                <ul id="pendingList" class="space-y-4"></ul>
+            </div>
+            <div>
+                <h3 class="text-3xl text-green-800">Accomplished Actions!</h3>
+                <ul id="completedList" class="space-y-4"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
